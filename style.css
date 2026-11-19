@@ -1,0 +1,314 @@
+/* ===== Cores e base ===== */
+:root {
+  --fundo: #0b1020;
+  --fundo-card: #151c33;
+  --borda: #2a3456;
+  --texto: #e8ecf5;
+  --texto-fraco: #b4bdd4;
+  --destaque: #f5a623;
+  --link: #8cc8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+a {
+  color: var(--link);
+}
+
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--destaque);
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* link escondido que aparece quando recebe foco pelo teclado */
+.pular {
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  padding: 8px 12px;
+  background: var(--destaque);
+  color: #000;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.pular:focus {
+  top: 8px;
+}
+
+/* ===== Cabeçalho ===== */
+.topo {
+  padding: 32px 16px 16px;
+  text-align: center;
+  background: linear-gradient(180deg, #1b2550, var(--fundo));
+  border-bottom: 1px solid var(--borda);
+}
+
+.topo h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--destaque);
+}
+
+.subtitulo {
+  margin: 4px 0 16px;
+  color: var(--texto-fraco);
+}
+
+.topo nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.topo nav a {
+  display: block;
+  padding: 8px 14px;
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--texto);
+}
+
+.topo nav a:hover {
+  background: var(--fundo-card);
+  border-color: var(--destaque);
+}
+
+/* ===== Conteúdo ===== */
+main,
+.curiosidades {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+section {
+  padding: 24px 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--destaque);
+  border-bottom: 2px solid var(--borda);
+  padding-bottom: 4px;
+}
+
+/* ===== Missões ===== */
+.lista-missoes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.missao {
+  background: var(--fundo-card);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.missao h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.missao figure {
+  margin: 0 0 12px;
+}
+
+.missao img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #000;
+}
+
+/* a foto do Webb tem fundo transparente, então não corto ela */
+.missao img[src$="jwst.png"] {
+  object-fit: contain;
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: var(--texto-fraco);
+  margin-top: 6px;
+}
+
+.data {
+  font-weight: bold;
+  color: var(--destaque);
+  margin: 0;
+}
+
+/* ===== Tabela ===== */
+.tabela-rolagem {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid var(--borda);
+}
+
+thead th {
+  background: #1b2550;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--fundo-card);
+}
+
+/* ===== Formulário ===== */
+.aviso {
+  color: var(--texto-fraco);
+  font-size: 0.9rem;
+}
+
+.formulario fieldset {
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 0 0 16px;
+}
+
+.formulario legend {
+  padding: 0 6px;
+  font-weight: bold;
+}
+
+.campo {
+  margin-bottom: 14px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  color: var(--texto);
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+}
+
+.grupo-radio label {
+  margin-right: 16px;
+}
+
+button {
+  font: inherit;
+  font-weight: bold;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  background: var(--destaque);
+  color: #000;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+/* ===== Curiosidades e rodapé ===== */
+.curiosidades {
+  padding-bottom: 24px;
+}
+
+.curiosidades ul {
+  padding-left: 20px;
+}
+
+.rodape {
+  text-align: center;
+  padding: 20px 16px;
+  border-top: 1px solid var(--borda);
+  color: var(--texto-fraco);
+  font-size: 0.9rem;
+}
+
+.rodape p {
+  margin: 4px 0;
+}
+
+/* ===== Telas maiores (tablet e computador) ===== */
+@media (min-width: 768px) {
+  .topo h1 {
+    font-size: 2.8rem;
+  }
+
+  .lista-missoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* o último card ocupa a linha toda pra não ficar sobrando um buraco,
+     com a foto do lado esquerdo e o texto do lado direito */
+  .missao:last-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    column-gap: 20px;
+  }
+
+  .missao:last-child figure {
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
+
+  .missao:last-child > :not(figure) {
+    grid-column: 2;
+  }
+
+  .formulario {
+    max-width: 640px;
+  }
+}
