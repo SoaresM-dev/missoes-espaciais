@@ -16,7 +16,6 @@
 body {
   margin: 0;
   font-family: system-ui, "Segoe UI", Roboto, sans-serif;
-  font-size: 1rem;
   line-height: 1.6;
   background: var(--fundo);
   color: var(--texto);
@@ -26,11 +25,12 @@ a {
   color: var(--link);
 }
 
-a:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-button:focus-visible {
+/* contorno pra mostrar onde está o foco quando navega pelo teclado */
+a:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
   outline: 3px solid var(--destaque);
   outline-offset: 2px;
 }
@@ -41,39 +41,18 @@ img {
   display: block;
 }
 
-/* link escondido que aparece quando recebe foco pelo teclado */
-.pular {
-  position: absolute;
-  left: 8px;
-  top: -60px;
-  padding: 8px 12px;
-  background: var(--destaque);
-  color: #000;
-  font-weight: bold;
-  z-index: 10;
-}
-
-.pular:focus {
-  top: 8px;
-}
-
 /* ===== Cabeçalho ===== */
 .topo {
-  padding: 32px 16px 16px;
+  padding: 32px 16px 20px;
   text-align: center;
-  background: linear-gradient(180deg, #1b2550, var(--fundo));
+  background: linear-gradient(#1b2550, var(--fundo));
   border-bottom: 1px solid var(--borda);
 }
 
 .topo h1 {
-  margin: 0;
+  margin: 0 0 16px;
   font-size: 2rem;
   color: var(--destaque);
-}
-
-.subtitulo {
-  margin: 4px 0 16px;
-  color: var(--texto-fraco);
 }
 
 .topo nav ul {
@@ -109,11 +88,10 @@ main,
 }
 
 section {
-  padding: 24px 0;
+  padding: 16px 0;
 }
 
 h2 {
-  font-size: 1.6rem;
   color: var(--destaque);
   border-bottom: 2px solid var(--borda);
   padding-bottom: 4px;
@@ -122,7 +100,6 @@ h2 {
 /* ===== Missões ===== */
 .lista-missoes {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -135,7 +112,6 @@ h2 {
 
 .missao h3 {
   margin-top: 0;
-  font-size: 1.3rem;
 }
 
 .missao figure {
@@ -143,21 +119,7 @@ h2 {
 }
 
 .missao img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
   border-radius: 8px;
-  background: #000;
-}
-
-/* a foto do Webb tem fundo transparente, então não corto ela */
-.missao img[src$="jwst.png"] {
-  object-fit: contain;
-}
-
-/* a foto da Apollo é quase quadrada, então corto embaixo pra não perder o capacete */
-.missao img[src$="apollo11.jpg"] {
-  object-position: top;
 }
 
 figcaption {
@@ -173,6 +135,7 @@ figcaption {
 }
 
 /* ===== Tabela ===== */
+/* no celular a tabela não cabe, então ela rola pro lado dentro dessa div */
 .tabela-rolagem {
   overflow-x: auto;
 }
@@ -268,10 +231,6 @@ button:hover {
   padding-bottom: 24px;
 }
 
-.curiosidades ul {
-  padding-left: 20px;
-}
-
 .rodape {
   text-align: center;
   padding: 20px 16px;
@@ -284,33 +243,15 @@ button:hover {
   margin: 4px 0;
 }
 
-/* ===== Telas maiores (tablet e computador) ===== */
+/* ===== Tablet e computador ===== */
 @media (min-width: 768px) {
   .topo h1 {
     font-size: 2.8rem;
   }
 
+  /* duas missões por linha */
   .lista-missoes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* o último card ocupa a linha toda pra não ficar sobrando um buraco,
-     com a foto do lado esquerdo e o texto do lado direito */
-  .missao:last-child {
-    grid-column: 1 / -1;
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 1fr;
-    column-gap: 20px;
-  }
-
-  .missao:last-child figure {
-    grid-column: 1;
-    grid-row: 1 / 4;
-  }
-
-  .missao:last-child > :not(figure) {
-    grid-column: 2;
   }
 
   .formulario {
