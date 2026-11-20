@@ -155,6 +155,11 @@ h2 {
   object-fit: contain;
 }
 
+/* a foto da Apollo é quase quadrada, então corto embaixo pra não perder o capacete */
+.missao img[src$="apollo11.jpg"] {
+  object-position: top;
+}
+
 figcaption {
   font-size: 0.85rem;
   color: var(--texto-fraco);
@@ -235,7 +240,7 @@ textarea {
   font: inherit;
   color: var(--texto);
   background: var(--fundo);
-  border: 1px solid var(--borda);
+  border: 1px solid #6b7aa6;
   border-radius: 6px;
 }
 
