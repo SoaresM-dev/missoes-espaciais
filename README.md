@@ -1,6 +1,6 @@
 # Missões Espaciais
 
-Atividade 1 da disciplina Linguagem de Script para Web (ADS, 3º período).
+Atividade 1 da disciplina Linguagem de Script para Web.
 
 Site sobre cinco missões espaciais: Sputnik 1, Apollo 11, Voyager 1, Hubble e James Webb. Tem um resumo de cada missão com foto, uma tabela comparando elas e um formulário de contato.
 
