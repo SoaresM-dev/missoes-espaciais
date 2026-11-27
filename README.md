@@ -1,14 +1,16 @@
 # Missões Espaciais
 
-Atividade 1 da disciplina Linguagem de Script para Web.
+Atividades 1 e 2 da disciplina Linguagem de Script para Web.
 
 Site sobre cinco missões espaciais: Sputnik 1, Apollo 11, Voyager 1, Hubble e James Webb. Tem um resumo de cada missão com foto, uma tabela comparando elas e um formulário de contato.
+
+Na Atividade 2 separei o site em quatro páginas (início, missões, linha do tempo e contato) e fiz a parte de SEO. O que mudou e o Lighthouse antes e depois estão no [SEO.md](SEO.md).
 
 Link do site: https://soaresm-dev.github.io/missoes-espaciais/
 
 ## Como ver
 
-É só entrar no link acima ou baixar o repositório e abrir o `index.html` no navegador.
+É só entrar no link acima. Para abrir no computador, abre a pasta no VS Code e usa o Live Server, porque os links para o início apontam para `./` e abrindo o arquivo direto eles mostram a pasta em vez da página.
 
 ## O que usei
 
