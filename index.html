@@ -3,225 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Missões Espaciais</title>
+  <title>Missões Espaciais: do Sputnik 1 ao telescópio James Webb</title>
+  <meta name="description" content="Resumo de cinco missões espaciais que marcaram a história: Sputnik 1, Apollo 11, Voyager 1, Hubble e James Webb, com fotos, datas e uma linha do tempo.">
+  <link rel="canonical" href="https://soaresm-dev.github.io/missoes-espaciais/">
+
+  <!-- Open Graph: é o que aparece quando alguém compartilha o link -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Missões Espaciais">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Missões Espaciais: do Sputnik 1 ao telescópio James Webb">
+  <meta property="og:description" content="Resumo de cinco missões espaciais que marcaram a história, com fotos, datas e uma linha do tempo.">
+  <meta property="og:url" content="https://soaresm-dev.github.io/missoes-espaciais/">
+  <meta property="og:image" content="https://soaresm-dev.github.io/missoes-espaciais/og-imagem.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="O telescópio Hubble em órbita da Terra">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Missões Espaciais",
+    "url": "https://soaresm-dev.github.io/missoes-espaciais/",
+    "description": "Resumo de cinco missões espaciais que marcaram a história, com fotos, datas e uma linha do tempo.",
+    "inLanguage": "pt-BR",
+    "author": {
+      "@type": "Person",
+      "name": "Murilo Soares",
+      "url": "https://github.com/SoaresM-dev"
+    }
+  }
+  </script>
 </head>
 <body>
   <header class="topo">
-    <h1>Missões Espaciais</h1>
+    <a class="logo" href="./">Missões Espaciais</a>
     <nav aria-label="Menu principal">
       <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#missoes">Missões</a></li>
-        <li><a href="#linha-do-tempo">Linha do tempo</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="./" aria-current="page">Início</a></li>
+        <li><a href="missoes.html">Missões</a></li>
+        <li><a href="linha-do-tempo.html">Linha do tempo</a></li>
+        <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- ===== Sobre ===== -->
-    <section id="sobre" aria-labelledby="titulo-sobre">
+    <h1>Missões Espaciais</h1>
+
+    <section aria-labelledby="titulo-sobre">
       <h2 id="titulo-sobre">Sobre o site</h2>
       <p>
-        Esse site é a Atividade 1 da disciplina de Linguagem de Script para Web. O tema que
-        escolhi foi missões espaciais. Escolhi cinco missões que eu acho importantes e coloquei
-        um resumo de cada uma, com foto e data de lançamento.
+        Esse site começou na Atividade 1 da disciplina de Linguagem de Script para Web. O tema que
+        escolhi foi missões espaciais. Escolhi cinco missões que eu acho importantes e fiz um resumo
+        de cada uma, com foto e data de lançamento.
       </p>
-      <p>Depois das missões tem uma tabela comparando as cinco e no final um formulário de contato.</p>
+      <p>Na Atividade 2 separei o site em páginas e arrumei a parte de SEO.</p>
     </section>
 
-    <!-- ===== Missões ===== -->
-    <section id="missoes" aria-labelledby="titulo-missoes">
-      <h2 id="titulo-missoes">As missões</h2>
-
-      <div class="lista-missoes">
-        <article class="missao">
-          <h3>Sputnik 1</h3>
-          <figure>
-            <img src="img/sputnik.jpg" alt="Réplica do Sputnik 1, uma esfera de metal com quatro antenas compridas" width="960" height="786">
-            <figcaption>Réplica do Sputnik 1. Foto: NASA.</figcaption>
-          </figure>
-          <p class="data">Lançamento: 4 de outubro de 1957</p>
-          <p>
-            Primeiro satélite artificial, lançado pela União Soviética. Era uma esfera de 58 cm
-            com quatro antenas que mandava um sinal de rádio (o famoso "bip"). Ficou uns três
-            meses em órbita. O lançamento dele foi o começo da corrida espacial com os Estados Unidos.
-          </p>
-        </article>
-
-        <article class="missao">
-          <h3>Apollo 11</h3>
-          <figure>
-            <img src="img/apollo11.jpg" alt="O astronauta Buzz Aldrin de traje espacial em pé na superfície da Lua" width="960" height="966">
-            <figcaption>Buzz Aldrin na Lua, foto tirada pelo Neil Armstrong. Foto: NASA.</figcaption>
-          </figure>
-          <p class="data">Lançamento: 16 de julho de 1969</p>
-          <p>
-            Foi a primeira vez que pessoas pisaram na Lua. Neil Armstrong e Buzz Aldrin desceram
-            com o módulo lunar Eagle no dia 20 de julho de 1969, e o Michael Collins ficou em órbita
-            esperando os dois. Eles passaram umas duas horas e meia andando do lado de fora, pegaram
-            amostras de rocha e voltaram para a Terra no dia 24.
-          </p>
-        </article>
-
-        <article class="missao">
-          <h3>Voyager 1</h3>
-          <figure>
-            <img src="img/voyager.jpg" alt="Desenho da sonda Voyager no espaço, com uma antena parabólica grande e branca" width="960" height="794">
-            <figcaption>Ilustração da sonda Voyager. Imagem: NASA/JPL.</figcaption>
-          </figure>
-          <p class="data">Lançamento: 5 de setembro de 1977</p>
-          <p>
-            Passou por Júpiter em 1979 e por Saturno em 1980 tirando fotos. Depois seguiu viagem
-            e em 2012 chegou no espaço interestelar, o primeiro objeto feito por humanos a chegar
-            lá. Até hoje ainda manda dados para a Terra.
-          </p>
-        </article>
-
-        <article class="missao">
-          <h3>Telescópio Hubble</h3>
-          <figure>
-            <img src="img/hubble.jpg" alt="O telescópio Hubble em órbita, prateado e com dois painéis solares abertos" width="960" height="721">
-            <figcaption>O Hubble visto do ônibus espacial Atlantis em 2009. Foto: NASA.</figcaption>
-          </figure>
-          <p class="data">Lançamento: 24 de abril de 1990</p>
-          <p>
-            Fica em órbita da Terra, a uns 540 km de altura. Quando lançaram, descobriram que o
-            espelho tinha um defeito e as fotos saíam borradas, então em 1993 foram astronautas
-            lá consertar. Depois disso ele tirou várias fotos famosas e ajudou a calcular a idade
-            do universo.
-          </p>
-        </article>
-
-        <article class="missao">
-          <h3>Telescópio James Webb</h3>
-          <figure>
-            <img src="img/jwst.png" alt="Modelo do telescópio James Webb, com o espelho dourado feito de hexágonos em cima de um escudo prateado" width="775" height="664">
-            <figcaption>Modelo do telescópio James Webb. Imagem: NASA.</figcaption>
-          </figure>
-          <p class="data">Lançamento: 25 de dezembro de 2021</p>
-          <p>
-            É o maior telescópio espacial que já foi lançado. Foi feito pela NASA junto com a ESA
-            (Europa) e a CSA (Canadá). O espelho tem 6,5 m e é dividido em 18 partes. Ele enxerga
-            no infravermelho e fica a 1,5 milhão de km da Terra, num lugar chamado ponto L2.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== Linha do tempo ===== -->
-    <section id="linha-do-tempo" aria-labelledby="titulo-linha">
-      <h2 id="titulo-linha">Linha do tempo</h2>
-
-      <div class="tabela-rolagem">
-        <table>
-          <caption>Missões espaciais por ano de lançamento</caption>
-          <thead>
-            <tr>
-              <th scope="col">Missão</th>
-              <th scope="col">Ano</th>
-              <th scope="col">Responsável</th>
-              <th scope="col">Tipo</th>
-              <th scope="col">Destino</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Sputnik 1</th>
-              <td>1957</td>
-              <td>União Soviética</td>
-              <td>Satélite</td>
-              <td>Órbita da Terra</td>
-            </tr>
-            <tr>
-              <th scope="row">Apollo 11</th>
-              <td>1969</td>
-              <td>NASA</td>
-              <td>Missão tripulada</td>
-              <td>Lua</td>
-            </tr>
-            <tr>
-              <th scope="row">Voyager 1</th>
-              <td>1977</td>
-              <td>NASA</td>
-              <td>Sonda</td>
-              <td>Júpiter, Saturno e espaço interestelar</td>
-            </tr>
-            <tr>
-              <th scope="row">Hubble</th>
-              <td>1990</td>
-              <td>NASA e ESA</td>
-              <td>Telescópio</td>
-              <td>Órbita da Terra</td>
-            </tr>
-            <tr>
-              <th scope="row">James Webb</th>
-              <td>2021</td>
-              <td>NASA, ESA e CSA</td>
-              <td>Telescópio</td>
-              <td>Ponto L2</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ===== Contato ===== -->
-    <section id="contato" aria-labelledby="titulo-contato">
-      <h2 id="titulo-contato">Contato</h2>
-      <p>Acha que faltou alguma missão? Deixa a sugestão aqui.</p>
-      <p class="aviso">
-        Os campos com * são obrigatórios. Obs.: o formulário ainda não envia de verdade, porque o
-        site não tem back-end.
+    <section aria-labelledby="titulo-lista">
+      <h2 id="titulo-lista">As cinco missões</h2>
+      <ul class="lista-links">
+        <li><a href="missoes.html#sputnik-1">Sputnik 1</a> (1957), o primeiro satélite artificial</li>
+        <li><a href="missoes.html#apollo-11">Apollo 11</a> (1969), a primeira vez que alguém pisou na Lua</li>
+        <li><a href="missoes.html#voyager-1">Voyager 1</a> (1977)</li>
+        <li><a href="missoes.html#hubble">Telescópio Hubble</a> (1990)</li>
+        <li><a href="missoes.html#james-webb">Telescópio James Webb</a> (2021), o maior telescópio espacial até hoje</li>
+      </ul>
+      <p>
+        Na <a href="linha-do-tempo.html">linha do tempo</a> tem uma tabela com as cinco lado a lado.
+        Se achar que faltou alguma, deixa a sugestão na <a href="contato.html">página de contato</a>.
       </p>
-
-      <form class="formulario">
-        <fieldset>
-          <legend>Seus dados</legend>
-
-          <div class="campo">
-            <label for="nome">Nome *</label>
-            <input type="text" id="nome" name="nome" required>
-          </div>
-
-          <div class="campo">
-            <label for="email">E-mail *</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Sua opinião</legend>
-
-          <div class="campo">
-            <label for="favorita">Missão favorita</label>
-            <select id="favorita" name="favorita">
-              <option value="">Escolha uma opção</option>
-              <option value="sputnik">Sputnik 1</option>
-              <option value="apollo11">Apollo 11</option>
-              <option value="voyager">Voyager 1</option>
-              <option value="hubble">Hubble</option>
-              <option value="webb">James Webb</option>
-            </select>
-          </div>
-
-          <fieldset class="grupo-radio">
-            <legend>Já assistiu a um lançamento de foguete?</legend>
-            <input type="radio" id="assistiu-sim" name="assistiu" value="sim">
-            <label for="assistiu-sim">Sim</label>
-            <input type="radio" id="assistiu-nao" name="assistiu" value="nao">
-            <label for="assistiu-nao">Não</label>
-          </fieldset>
-
-          <div class="campo">
-            <label for="sugestao">Sugestão de missão</label>
-            <textarea id="sugestao" name="sugestao" rows="4"></textarea>
-          </div>
-        </fieldset>
-
-        <button type="submit">Enviar</button>
-      </form>
     </section>
   </main>
 
@@ -237,7 +94,7 @@
   </aside>
 
   <footer class="rodape">
-    <p>Atividade 1 de Linguagem de Script para Web. Murilo Soares, 2026.</p>
+    <p>Atividades 1 e 2 de Linguagem de Script para Web. Murilo Soares, 2026.</p>
     <p>Imagens: NASA (domínio público), tiradas do Wikimedia Commons.</p>
   </footer>
 </body>

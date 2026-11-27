@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Missões Espaciais</title>
+  <meta name="description" content="Achou que faltou alguma missão espacial no site? Manda a sugestão pelo formulário de contato e conta qual das cinco missões é a sua favorita.">
+  <link rel="canonical" href="https://soaresm-dev.github.io/missoes-espaciais/contato.html">
+
+  <!-- Open Graph: é o que aparece quando alguém compartilha o link -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Missões Espaciais">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Contato | Missões Espaciais">
+  <meta property="og:description" content="Achou que faltou alguma missão? Manda a sugestão pelo formulário.">
+  <meta property="og:url" content="https://soaresm-dev.github.io/missoes-espaciais/contato.html">
+  <meta property="og:image" content="https://soaresm-dev.github.io/missoes-espaciais/og-imagem.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="O telescópio Hubble em órbita da Terra">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://soaresm-dev.github.io/missoes-espaciais/" },
+      { "@type": "ListItem", "position": 2, "name": "Contato", "item": "https://soaresm-dev.github.io/missoes-espaciais/contato.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topo">
+    <a class="logo" href="./">Missões Espaciais</a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="./">Início</a></li>
+        <li><a href="missoes.html">Missões</a></li>
+        <li><a href="linha-do-tempo.html">Linha do tempo</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <nav class="trilha" aria-label="Você está em">
+      <a href="./">Início</a> &gt; <span aria-current="page">Contato</span>
+    </nav>
+
+    <h1>Contato</h1>
+    <p>Acha que faltou alguma missão? Deixa a sugestão aqui.</p>
+    <p class="aviso">
+      Os campos com * são obrigatórios. Obs.: o formulário ainda não envia de verdade, porque o
+      site não tem back-end.
+    </p>
+
+    <form class="formulario">
+      <fieldset>
+        <legend>Seus dados</legend>
+
+        <div class="campo">
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sua opinião</legend>
+
+        <div class="campo">
+          <label for="favorita">Missão favorita</label>
+          <select id="favorita" name="favorita">
+            <option value="">Escolha uma opção</option>
+            <option value="sputnik">Sputnik 1</option>
+            <option value="apollo11">Apollo 11</option>
+            <option value="voyager">Voyager 1</option>
+            <option value="hubble">Hubble</option>
+            <option value="webb">James Webb</option>
+          </select>
+        </div>
+
+        <fieldset class="grupo-radio">
+          <legend>Já assistiu a um lançamento de foguete?</legend>
+          <input type="radio" id="assistiu-sim" name="assistiu" value="sim">
+          <label for="assistiu-sim">Sim</label>
+          <input type="radio" id="assistiu-nao" name="assistiu" value="nao">
+          <label for="assistiu-nao">Não</label>
+        </fieldset>
+
+        <div class="campo">
+          <label for="sugestao">Sugestão de missão</label>
+          <textarea id="sugestao" name="sugestao" rows="4"></textarea>
+        </div>
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer class="rodape">
+    <p>Atividades 1 e 2 de Linguagem de Script para Web. Murilo Soares, 2026.</p>
+    <p>Imagens: NASA (domínio público), tiradas do Wikimedia Commons.</p>
+  </footer>
+</body>
+</html>

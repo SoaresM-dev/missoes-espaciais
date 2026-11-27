@@ -49,9 +49,13 @@ img {
   border-bottom: 1px solid var(--borda);
 }
 
-.topo h1 {
-  margin: 0 0 16px;
-  font-size: 2rem;
+/* nome do site no topo, que é link para o início */
+.logo {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
   color: var(--destaque);
 }
 
@@ -79,6 +83,12 @@ img {
   border-color: var(--destaque);
 }
 
+/* marca no menu a página que está aberta */
+.topo nav a[aria-current="page"] {
+  border-color: var(--destaque);
+  color: var(--destaque);
+}
+
 /* ===== Conteúdo ===== */
 main,
 .curiosidades {
@@ -89,6 +99,21 @@ main,
 
 section {
   padding: 16px 0;
+}
+
+main h1 {
+  color: var(--destaque);
+  margin: 16px 0 8px;
+}
+
+.trilha {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--texto-fraco);
+}
+
+.lista-links li {
+  margin-bottom: 6px;
 }
 
 h2 {
@@ -110,8 +135,10 @@ h2 {
   padding: 16px;
 }
 
-.missao h3 {
+.missao h2 {
   margin-top: 0;
+  color: var(--texto);
+  border-bottom: none;
 }
 
 .missao figure {
@@ -231,6 +258,10 @@ button:hover {
   padding-bottom: 24px;
 }
 
+main {
+  padding-bottom: 24px;
+}
+
 .rodape {
   text-align: center;
   padding: 20px 16px;
@@ -245,8 +276,8 @@ button:hover {
 
 /* ===== Tablet e computador ===== */
 @media (min-width: 768px) {
-  .topo h1 {
-    font-size: 2.8rem;
+  .logo {
+    font-size: 2rem;
   }
 
   /* duas missões por linha */
