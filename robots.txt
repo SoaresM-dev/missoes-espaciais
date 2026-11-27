@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soaresm-dev.github.io/missoes-espaciais/sitemap.xml
