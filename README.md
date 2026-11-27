@@ -10,7 +10,7 @@ Link do site: https://soaresm-dev.github.io/missoes-espaciais/
 
 ## Como ver
 
-É só entrar no link acima. Para abrir no computador, abre a pasta no VS Code e usa o Live Server, porque os links para o início apontam para `./` e abrindo o arquivo direto eles mostram a pasta em vez da página.
+É só entrar no link acima. Para abrir pelos arquivos, abre a pasta no VS Code e usa o Live Server. Se abrir o index.html direto, os links para o início (`./`) mostram a pasta em vez da página.
 
 ## O que usei
 

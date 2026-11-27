@@ -19,7 +19,7 @@ Os nomes dos arquivos são em minúsculo, com hífen e sem acento, para a URL fi
 
 Cada página tem o próprio title e a própria description. Deixei o title com até uns 60 caracteres e a description entre 130 e 155, porque é mais ou menos o que aparece no Google antes de cortar.
 
-O canonical tem o endereço completo da página. No início usei o endereço que termina em barra em vez do index.html, e os links para o início apontam para `./`, para a mesma página não ficar com duas URLs.
+O canonical tem o endereço completo da página. Na página inicial usei o endereço que termina em barra em vez do index.html. Os links para o início também apontam para `./`, para a mesma página não ficar com duas URLs.
 
 ## Open Graph e favicon
 
